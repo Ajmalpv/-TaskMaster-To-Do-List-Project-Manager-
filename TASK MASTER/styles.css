@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    background: url("./assets/image.jpg");
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    max-width: 600px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow: hidden; /* Hide overflow on container */
+  }
+
+  .todo-list-container {
+    max-height: 300px; /* Limit the height of the list container */
+    overflow-y: auto; /* Add vertical scrollbar when content exceeds container height */
+  }
+
+  .todo-list-container::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  .todo-list-container::-webkit-scrollbar-track {
+    background-color: orange; /* Set scrollbar track color */
+    border-radius: 5px;
+  }
+
+  .todo-list-container::-webkit-scrollbar-thumb {
+    background-color: white; /* Set scrollbar thumb color */
+    border-radius: 5px;
+    border: 2px solid orange; /* Set scrollbar thumb border color */
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    border: 1px solid orange;
+    border-radius: 5px 0 0 5px;
+    font-size: 16px;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  button:hover {
+    background-color: #ff8000;
+    transform: scale(1.05);
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Remove default margin */
+  }
+
+  li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #eee;
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Added relative position for the line */
+  }
+
+  .delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  .delete-btn:hover {
+    background-color: #c82333;
+    transform: scale(1.1);
+  }
+
+  .todo-text {
+    flex: 1;
+    margin-right: 10px;
+  }
+
+  .strike-through {
+    text-decoration: line-through;
+  }
+
+  .checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    transition: transform 0.2s;
+  }
+
+  .checkbox:hover {
+    transform: scale(1.1);
+  }
